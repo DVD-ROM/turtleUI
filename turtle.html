@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Turtle Graphics</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="turtle.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Roboto"
+      rel="stylesheet"
+    />
+  </head>
+  <!--body onresize="resizeColumns();"> -->
+  <body id="body">
+    <h1>Turtle Graphics</h1>
+    <div id="canvaswrapper">
+      <canvas id="turtlecanvas" width="900" height="700"></canvas>
+      <canvas id="imagecanvas" width="900" height="700"></canvas>
+      <div id="instructions">
+        <h2>Instructions</h2>
+        <b>forward(50) | fd(50) </b>
+        <p>
+          Moves the turtle forward 50 steps. You can change the number to make
+          it move more or less.
+        </p>
+        <b> backward(50) | back(50) | bk(50) </b>
+        <p>
+          Moves the turtle backward 50 steps, but still facing forward. You can
+          change the number to make it move more or less.
+        </p>
+        <b> right(30) | rt(30) </b>
+        <p>
+          Makes the turtle turn right 30 degrees. You can change the number to
+          make it turn more or less. 180 degrees is turning half a circle. 90
+          degrees is turning half of that! 0 degrees is no turn.
+        </p>
+        <b> left(30) | lt(30) </b>
+        <p>
+          Makes the turtle turn left 30 degrees. You can change the number to
+          make it turn more or less. 180 degrees is turning half a circle. 90
+          degrees is turning half of that! 0 degrees is no turn. 0 degrees is no
+          turn.
+        </p>
+        <b> penup() | penUp() | up() | pu() </b>
+        <p>
+          Lifts the turtle off the paper so that it doesn't draw when it moves.
+        </p>
+        <b> pendown() | penDown() | down() | pd() </b>
+        <p>Puts the turtle on the paper so that it draws when it moves.</p>
+        <b> hideturtle() | hideTurtle() | ht() </b>
+        <p>Hides the turtle. It can still draw, but it isn't shown.</p>
+        <b> showturtle() | showTurtle() | st() </b>
+        <p>Shows the turtle.</p>
+        <b> home() </b>
+        <p>
+          Moves the turtle to its home in the center (x = 0, y = 0) and pointing
+          to the top (angle = 0)
+        </p>
+        <b> clear() </b>
+        <p>Erases everything, but leaves the turtle where it is.</p>
+        <b> reset() </b>
+        <p>
+          Erases everything and moves the turtle to its home in the center (x =
+          0, y = 0) and pointing to the top (angle = 0)
+        </p>
+        <b> goto(30, 40) </b>
+        <p>
+          Makes the turtle teleport to the place 30 steps right from the center
+          and 40 steps up from the center. In other words, the place where x =
+          30, y = 40. You can change the number of steps! To make the turtle
+          teleport to a place left from the center, add a negative sign - to the
+          first number, like this: goto(-30, 40) To make the turtle teleport to
+          a place down from the center, add a negative sign - to the second
+          number, like this: goto (30, -40)
+        </p>
+        <b> setx(30) | setX(30) </b>
+        <p>
+          Makes the turtle teleport to 30 steps right from the center, without
+          changing how up or how down it is. To make the turtle teleport to a
+          place left from the center, add a negative sign - to the number, like
+          this: setx(-30)
+        </p>
+        <b> sety(40) | setY(40) </b>
+        <p>
+          Makes the turtle teleport to 40 steps up from the center, without
+          changing how left or how right it is. To make the turtle teleport to a
+          place down from the center, add a negative sign - to the number, like
+          this: sety(-40)
+        </p>
+        <b> angle(90) </b>
+        <p>
+          Makes the turtle point east. You can change the number to change the
+          direction the turtle faces. 0 is North, 90 is East, 180 is South, 270
+          is West.
+        </p>
+        <b> width(6) | pensize(6) </b>
+        <p>
+          Changes the thickness of the turtle's pen to 6. You can change the
+          number to make the width thicker or thinner.
+        </p>
+        <b> color("red") </b>
+        <p>
+          Changes the color of the turtle's pen to red. You can change it to
+          another color, just remember to write it inside double quotation
+          marks, like this: "green". There are actually hundreds of colors you
+          can choose! Talk to us if you need help finding a color.
+        </p>
+        <b> curveright(5, 180) </b>
+        <p>
+          Makes the turtle draw part of a circle by turning right. Change the
+          first number to control how far away the circle should be. Change the
+          second number to control how much of the circle to draw. In the
+          example above, the turtle draws half a circle 5 steps away.
+        </p>
+        <b> curveleft(5, 180) </b>
+        <p>
+          Makes the turtle draw part of a circle by turning left. Change the
+          first number to control how far away the circle should be. Change the
+          second number to control how much of the circle to draw. In the
+          example above, the turtle draws half a circle 5 steps away.
+        </p>
+        <b> dot(5) </b>
+        <p>
+          Makes the turtle draw a dot that's 5 pixels thick. Change the number
+          to make the dot bigger or smaller!
+        </p>
+      </div>
+    </div>
+    <!-- canvaswrapper -->
+
+    <!-- scripts -->
+
+    <script type="text/javascript" src="turtle.js"></script>
+    <script type="text/javascript">
+      wrap(false);
+
+      // forward(90);
+      // rt(90);
+      forward(50);
+    </script>
+  </body>
+</html>
