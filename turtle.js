@@ -1201,8 +1201,11 @@ function random(low, high) {
 function repeat(n, action) {
   var count = 1;
   for (count = 1; count <= n; count += 1) {
-    action();
-    if (errorFound) break;
+    try {
+      action();
+    } catch (err) {
+      break;
+    }
   }
 }
 
@@ -1395,8 +1398,11 @@ var timeouts = []; //array of time out IDs started with the delay function
 function animate(f, ms) {
   intervals.push(
     setInterval(function () {
-      f();
-      if (errorFound) stop();
+      try {
+        f();
+      } catch (err) {
+        stop();
+      }
     }, ms)
   );
 }
@@ -1414,8 +1420,11 @@ function delay(f, ms) {
   timeouts.push(
     setTimeout(function () {
       timeouts.pop(); // pop the current timer
-      f();
-      if (errorFound) stop();
+      try {
+        f();
+      } catch (err) {
+        stop();
+      }
     }, ms)
   );
 }
